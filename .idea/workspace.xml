@@ -13,6 +13,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
   </component>
@@ -48,16 +51,31 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/MY-PC/IdeaProjects/Mazen",
-    "settings.editor.selected.configurable": "preferences.editor.code.editing"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.C:/Users/MY-PC/IdeaProjects/Mazen/testng.xml">
-    <configuration name="UnloggedCustomerSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="maven.selenium.UnloggedCustomerSearch" />
-      <module name="com.inflightcloud.akamaicareers" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MY-PC\IdeaProjects\Mazen" />
+      <recent name="C:\Users\MY-PC\IdeaProjects\Mazen\src\test\java\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MY-PC\IdeaProjects\Mazen\src\test\java\resources" />
+      <recent name="C:\Users\MY-PC\IdeaProjects\Mazen\src\test\java\data" />
+      <recent name="C:\Users\MY-PC\IdeaProjects\Mazen\src\main\java" />
+      <recent name="C:\Users\MY-PC\IdeaProjects\Mazen\src\locators" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.TestSuite">
+    <configuration name="ExcelReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data.ExcelReader" />
+      <module name="Mazen" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="maven.selenium.*" />
+          <option name="PATTERN" value="data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,10 +83,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/MY-PC/IdeaProjects/Mazen/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSuite" type="TestNG" temporary="true">
       <module name="Mazen" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/test-output" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -142,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/MY-PC/IdeaProjects/Mazen/testng.xml" />
+        <item itemvalue="TestNG.TestSuite" />
+        <item itemvalue="Application.ExcelReader" />
         <item itemvalue="TestNG./Users/alsadeqm/IdeaProjects/com.inflightcloud.akamaicareers/TestngDemo.xml" />
         <item itemvalue="TestNG.UnloggedCustomerSearch" />
         <item itemvalue="TestNG.UnloggedCustomerSearch.test" />
-        <item itemvalue="Application.UnloggedCustomerSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -193,6 +223,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Remove deleted class" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Mazen$TestSuite.ic" NAME="TestSuite Coverage Results" MODIFIED="1674910426285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/com_inflightcloud_akamaicareers$_Users_alsadeqm_IdeaProjects_com_inflightcloud_akamaicareers_TestngDemo_xml.ic" NAME="$PROJECT_DIR$/TestngDemo.xml Coverage Results" MODIFIED="1668538981182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/com_inflightcloud_akamaicareers$UnloggedCustomerSearch.ic" NAME="UnloggedCustomerSearch Coverage Results" MODIFIED="1668522816964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>maven.selenium.*</FILTER>

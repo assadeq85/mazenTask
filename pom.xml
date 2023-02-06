@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,6 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <aspectj.version>1.8.10</aspectj.version>
+
     </properties>
 
     <dependencies>
@@ -22,15 +24,29 @@
             <artifactId>selenium-java</artifactId>
             <version>4.6.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.7.0</version>
         </dependency>
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.11.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.20.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
         </dependency>
     </dependencies>
 
@@ -45,15 +61,34 @@
                         <!-- put your configurations here -->
                     </configuration>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M7</version>
+                    <version>2.20</version>
+                    <!--<version>3.0.0-M7</version> -->
                     <configuration>
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        </argLine>
+
                         <suiteXmlFiles>
                             <suiteXmlFile>${testNGSuite}</suiteXmlFile>
                         </suiteXmlFiles>
+
+                        <systemPropertyVariables>
+                            <allure.results.directory>${allureResultsDirectory}</allure.results.directory>
+                        </systemPropertyVariables>
+
                     </configuration>
+
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjweaver</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -61,7 +96,7 @@
 
     <profiles>
         <profile>
-            <id>prodTest</id>
+            <id>local</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
                 <property>
@@ -71,6 +106,26 @@
             </activation>
             <properties>
                 <testNGSuite>testng.xml</testNGSuite>
+                <allureResultsDirectory>
+                    C:\Users\MY-PC\.jenkins\workspace\MazenTaskBuilder_Local\target\allure-results
+                </allureResultsDirectory>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>gitHub</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>environment</name>
+                    <value>production</value>
+                </property>
+            </activation>
+            <properties>
+                <testNGSuite>testng.xml</testNGSuite>
+                <allureResultsDirectory>
+                    C:\Users\MY-PC\.jenkins\workspace\MazenTaskBuilder - GitHub\target\allure-results
+                </allureResultsDirectory>
             </properties>
         </profile>
     </profiles>
