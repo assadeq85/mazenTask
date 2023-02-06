@@ -2,13 +2,9 @@
 <suite name="All Test Suite">
     <parameter name="browser" value="chrome"></parameter>
     <test verbose="2" preserve-order="true" name="Mazen Task">
-        <parameter name="homePageUrl" value="https://akamaicareers.inflightcloud.com"></parameter>
         <classes>
             <class name="tests.HomePageTest">
                 <methods>
-                    <parameter name="career" value="Senior Software Development Engineer in Test"></parameter>
-                    <parameter name="country" value="United States"></parameter>
-                    <parameter name="careerNotToBeFound" value="XXX"></parameter>
                     <include name="unloggedCustomerCanSearchForAJob"/>
                     <include name="customerNotifiedWhenNoOffersMatchGivenCriteria"/>
                 </methods>
